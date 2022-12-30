@@ -8,3 +8,23 @@
   color: #0d1d2c;
   background-color: #f6f6f6;
 }
+.container {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.resultSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,4 +1,4 @@
-const TransActionComponent = (transactions) => {
+const TransActionComponent = ({ transactions }) => {
   return <section>Transaction !</section>;
 };
 

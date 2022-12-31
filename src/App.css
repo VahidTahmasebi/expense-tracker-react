@@ -28,3 +28,23 @@
   justify-content: space-between;
   align-items: center;
 }
+.resultBox {
+  width: 135px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.resultBox span {
+  font-weight: bold;
+}
+.resultBox:first-child span {
+  color: red;
+}
+.resultBox:last-child span {
+  color: green;
+}

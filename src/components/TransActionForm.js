@@ -1,19 +1,24 @@
 import { useState } from "react";
 
-const TransActionForm = () => {
+const TransActionForm = ({ addTransaction }) => {
   const [formValue, setFormValue] = useState({
-    type: "Expense",
+    type: "expense",
     amount: 0,
     desc: "",
   });
 
-  // receive enw state
+  // receive new state
   const changeHandler = (e) => {
     setFormValue({ ...formValue, [e.target.name]: e.target.value });
   };
 
+  const submitHandler = (e) => {
+    e.preventDefault();
+    addTransaction(formValue);
+  };
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <input
         type='text'
         name='desc'
@@ -35,7 +40,7 @@ const TransActionForm = () => {
           checked={formValue.type === "expense"}
           onChange={changeHandler}
         />
-        <label for='expense'>Expense</label>
+        <label htmlFor='expense'>Expense</label>
         <input
           type='radio'
           value='income'
@@ -44,9 +49,9 @@ const TransActionForm = () => {
           checked={formValue.type === "income"}
           onChange={changeHandler}
         />
-        <label for='income'>Income</label>
+        <label htmlFor='income'>Income</label>
       </div>
-      <button>add transaction</button>
+      <button type='submit'>add transaction</button>
     </form>
   );
 };

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const TransActionForm = ({ addTransaction }) => {
+const TransActionForm = ({ addTransaction, setIsShow }) => {
   const [formValue, setFormValue] = useState({
     type: "expense",
     amount: 0,
@@ -15,6 +15,8 @@ const TransActionForm = ({ addTransaction }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     addTransaction(formValue);
+    // close the form
+    setIsShow(false);
   };
 
   return (
@@ -24,12 +26,14 @@ const TransActionForm = ({ addTransaction }) => {
         name='desc'
         onChange={changeHandler}
         value={formValue.desc}
+        maxLength='15'
       />
       <input
         type='number'
         name='amount'
         onChange={changeHandler}
         value={formValue.amount}
+        max='999999999'
       />
       <div className='radioBox'>
         <input

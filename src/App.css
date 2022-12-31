@@ -93,3 +93,12 @@ input[type="radio"] {
 .radioBox label {
   margin-left: 3px;
 }
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  background: #f4f4f5;
+}

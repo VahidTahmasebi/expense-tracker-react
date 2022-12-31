@@ -51,7 +51,7 @@ const TransActionForm = ({ addTransaction }) => {
         />
         <label htmlFor='income'>Income</label>
       </div>
-      <button type='submit'>add transaction</button>
+      <button className="btn primary" type='submit'>add transaction</button>
     </form>
   );
 };

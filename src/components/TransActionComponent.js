@@ -2,9 +2,13 @@ const TransActionComponent = ({ transactions }) => {
   return (
     // receiving transaction and looping on it and finally display items
     <section>
-      {transactions.map((t) => (
-        <div key={t.id}>{t.desc}</div>
-      ))}
+      {transactions.length &&
+        transactions.map((t) => (
+          <div className='transaction' key={t.id}>
+            <span>{t.desc}</span>
+            <span>{t.amount}</span>
+          </div>
+        ))}
     </section>
   );
 };

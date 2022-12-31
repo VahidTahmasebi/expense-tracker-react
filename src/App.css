@@ -68,3 +68,28 @@
   color: #dc2626;
   background-color: #fff;
 }
+form {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+input {
+  padding: 10px 12px;
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+input[type="radio"] {
+  margin-left: 10px;
+}
+.radioBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+}
+.radioBox label {
+  margin-left: 3px;
+}

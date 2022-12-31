@@ -2,7 +2,7 @@ import { useState } from "react";
 import TransActionForm from "./TransActionForm";
 
 const OverViewComponent = ({ income, expense, addTransaction }) => {
-  const [isShow, setIsShow] = useState();
+  const [isShow, setIsShow] = useState(false);
   return (
     <>
       <div className='topSection'>

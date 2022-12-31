@@ -15,7 +15,8 @@ const ExpenseApp = () => {
   useEffect(() => {
     let expenseValue = 0;
     let incomeValue = 0;
-    
+
+    // Add show the final numbers
     transactions.forEach((t) => {
       t.type === "expense"
         ? (expenseValue += parseFloat(t.amount))

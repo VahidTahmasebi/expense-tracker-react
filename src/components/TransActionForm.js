@@ -27,6 +27,7 @@ const TransActionForm = ({ addTransaction, setIsShow }) => {
         onChange={changeHandler}
         value={formValue.desc}
         maxLength='15'
+        placeholder='Description'
       />
       <input
         type='number'
@@ -34,6 +35,7 @@ const TransActionForm = ({ addTransaction, setIsShow }) => {
         onChange={changeHandler}
         value={formValue.amount}
         max='999999999'
+        placeholder='Amount'
       />
       <div className='radioBox'>
         <input

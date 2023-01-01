@@ -30,10 +30,18 @@ const TransActionComponent = ({ transactions }) => {
     filteredTransaction(searchItem);
   }, [transactions]);
 
+  if (!transactions.length) return <h4 className="noItem">add some tnx</h4>;
+
   return (
     // receiving transaction and looping on it and finally display items
     <section>
-      <input type='text' value={searchItem} onChange={changeHandler} />
+      <input
+        type='text'
+        value={searchItem}
+        onChange={changeHandler}
+        placeholder='search for tnx...'
+        className='search'
+      />
       {filteredTnx.length
         ? filteredTnx.map((t) => (
             <div
@@ -47,7 +55,7 @@ const TransActionComponent = ({ transactions }) => {
               <span>$ {t.amount}</span>
             </div>
           ))
-        : "add some transaction"}
+        : "no item matchs!"}
     </section>
   );
 };

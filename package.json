@@ -1,9 +1,7 @@
 {
   "name": "expense-tracker-react",
   "version": "0.1.0",
-  "author": "vaeid_t",
-  "license": "ISC",
-  "keywords": [],
+  "private": true,
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -13,8 +11,18 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+
   "devDependencies": {
     "gh-pages": "^5.0.0"
   }
